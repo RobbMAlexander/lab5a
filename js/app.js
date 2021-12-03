@@ -54,11 +54,24 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  let sumFirst = sum(a, b);
+  // console.log(sumFirst);
+  let sumSecond = sum(sumFirst[0], c);
+  // console.log(sumSecond);
+  let sumAndMultiplyStringSum = `${a} and ${b} and ${c} sum to ${sumSecond[0]}.`;
+  // console.log(sumAndMultiplyStringSum);
+  let multiplyFirst = multiply (a, b);
+  // console.log(multiplyFirst);
+  let multiplySecond = multiply (multiplyFirst[0], c);
+  // console.log(multiplySecond);
+  let sumAndMultiplyStringMultiply = `The product of ${a} and ${b} and ${c} is ${multiplySecond[0]}.`;
+  // console.log(sumAndMultiplyStringMultiply);
+  // console.log([sumSecond, multiplySecond, sumAndMultiplyStringSum, sumAndMultiplyStringMultiply]);
+  return [sumSecond[0], multiplySecond[0], sumAndMultiplyStringSum, sumAndMultiplyStringMultiply];
 }
-
+// console.log(sum(3, 2)[0]);
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
